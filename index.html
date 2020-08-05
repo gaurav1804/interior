@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  		<title>Highway - Free CSS Template</title>
+  		<title>Origines</title>
 <!-- 
 
 Highway Template
@@ -30,7 +30,7 @@ https://templatemo.com/tm-520-highway
 
     <nav>
         <div class="logo">
-            <a href="index.html">Origins<em>World</em></a>
+            <a href="index.html"><img src="logo-removebg-preview.png" alt="" style="width: 75px;"></a>
         </div>
         <div class="menu-icon">
         <span></span>
@@ -38,21 +38,20 @@ https://templatemo.com/tm-520-highway
     </nav>
 
     <div id="video-container">
-        <div class="video-overlay"></div>
         <div class="video-content">
             <div class="inner">
-              <h1>Welcome to <em>Origins</em></h1>
-              <p>See your dream designs coming true</p>
               <div class="row" style="padding-top: 30px; text-align: center;">
-                <div class="col-12">
+                <div class="col-12 dummy" id="vContent">
+                    <h1>Welcome to <em>Origins</em></h1>
+                    <p>See your dream designs coming true</p>
                     <a href="interior/index.html" class="btn mlr-2" style="width: 200px; text-decoration: none; margin-bottom: 30px">Enter to Origins</a>
                     <a href="painting/index.html" class="btn mlr-2" style="width: 200px; text-decoration: none; margin-bottom: 30px; margin-left: 30px">Enter to Painting</a>
                 </div>
               </div>
             </div>
         </div>
-        <video autoplay="" loop="" muted>
-        	<source src="intro.mp4" type="video/mp4" />
+        <video id="myVideo" autoplay="" muted>
+        	<source src="intro3.mp4" type="video/mp4" />
         </video>
     </div>
 
@@ -89,7 +88,13 @@ https://templatemo.com/tm-520-highway
     
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
+    <script>
+        var vid = document.getElementById("myVideo");
+        var isEnded = false;
+        vid.onended = function() {
+            $("#vContent").css("display", "block");
+        };
+    </script>
     
 </body>
 </html>
