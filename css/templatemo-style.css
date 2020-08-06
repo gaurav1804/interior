@@ -267,8 +267,9 @@ nav {
 }
 
 #vContent {
-  background-color: #000;
-  padding: 50px;
+  border-radius: 1.5em;
+  background-color: #8e8583;
+  padding: 20px;
   z-index: 99999;
   height: 100%;
   width: 100%;
